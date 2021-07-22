@@ -14,5 +14,9 @@ export class InicioComponent implements OnInit {
 
   homeSlider={items: 1, dots: true, nav:true};
  
+  goToLogin() {
+    window.location.href='http://127.0.0.1:8000';
+  }
+
 
 }
