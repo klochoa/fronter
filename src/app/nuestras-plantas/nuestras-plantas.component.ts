@@ -17,13 +17,12 @@ export class NuestrasPlantasComponent implements OnInit {
 
     this.plantas.cargarinformacionplantas()
     .subscribe((resp: any) => {
-       console.log('2',resp);
-
+      
        this.plantas1 = resp;
        console.log('3',this.plantas1);
        
     })
-    console.log('4',this.plantas1);
+    
   }
 
   Ficha(id: any){

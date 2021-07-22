@@ -21,7 +21,7 @@
             <a   href="Estacion" class="nav-link px-2 link-dark">ESTACIÓN</a>
           </li>
           <li>
-            <a  href="FichaTecnica" class="nav-link px-2 link-dark">PROYECTOS</a>
+            <a  href="#" class="nav-link px-2 link-dark">PROYECTOS</a>
           </li>
           <li>
             <a  href="MuestraPlantas" class="nav-link px-2 link-dark">NUESTRAS PLANTAS</a>
@@ -94,7 +94,7 @@
   
     <!--CARDS-->
     <div class="container row row-cols-3 " id="tarjetas"  >
-      <div *ngFor="let item of plantas1" [routerLink]= "['FichaTecnica', item.id]" >
+      <div *ngFor="let item of plantas1" [routerLink]= "['FichaTecnica']" >
         <div class="card">
           <div class="imgBx">
             <img src={{item.imagen}} alt="" >
