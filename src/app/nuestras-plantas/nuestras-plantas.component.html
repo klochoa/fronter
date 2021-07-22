@@ -1,0 +1,165 @@
+<!--MENU-->
+<header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnj_M_P-jS0JqjcfuwCJt0rvPWl58shdXjCg&usqp=CAU"
+            class="imagen1">
+        </a>
+  
+        <h2>AGROTICS</h2>
+        <hr>
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control rounded" placeholder="Search..." aria-label="Search">
+        </form>
+  
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-end mb-md-0">
+          <li>
+            <a href="#" class="nav-link px-2 link-secondary">INICIO</a>
+          </li>
+          <li>
+            <a  [routerLink]= "['Estacion']" href="#" class="nav-link px-2 link-dark">ESTACIÓN</a>
+          </li>
+          <li>
+            <a [routerLink]= "['FichaTecnica']" href="#" class="nav-link px-2 link-dark">PROYECTOS</a>
+          </li>
+          <li>
+            <a [routerLink]="['MuestraPlantas']" href="#" class="nav-link px-2 link-dark">NUESTRAS PLANTAS</a>
+          </li>
+        </ul>
+  
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!--DIVISOR-->
+  <div class="jumbotron jumbotron-fluid" style="background-color: #2E842D;">
+    <div class="container">
+      <!--<h1 class="display-4">Fluid jumbotron</h1>-->
+      <br>
+      <h2 id="consultaplantas">Consulta las características de nuestras plantas</h2>
+      <br>
+    </div>
+  </div>
+  <!--SEACRCH-->
+  <br>
+  <div class="container" style="background-color: #EAEDED;">
+    <div class="input-group rounded">
+      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+        aria-describedby="search-addon" />
+      <span class="input-group-text border-0" id="search-addon">
+        <button class="fa fa-user-circle-o"></button>
+      </span>
+    </div>
+  
+    <!--BOTONES-->
+  
+    <br>
+  
+    <div class="justify-content-center">
+      <div class="btn-toolbar " role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group " role="group" aria-label="Third group" style="margin-left: 30px">
+          <button type="button" class="btn btn-secondary btn-lg" id="clasificacion">Todas</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group" style="margin-left: 30px">
+          <button type="button" class="btn btn-secondary btn-lg" id="clasificacion">Medicinales</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group" style="margin-left: 30px">
+          
+          <button type="button" class="btn btn-secondary btn-lg" id="clasificacion" > Ornamentales</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group" style="margin-left: 30px">
+          <button type="button" class="btn btn-secondary btn-lg" id="clasificacion">Alimenticias</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group" style="margin-left: 30px">
+          <button type="button" class="btn btn-secondary btn-lg" id="clasificacion">Frutales</button>
+        </div>
+      </div>
+    </div>
+  
+    <!--CARDS-->
+    <div class="container row row-cols-3 " id="tarjetas"  >
+       <div *ngFor="let item of plantas1"[routerLink]= "['FichaTecnica', item.id]" >
+      <div class="card">
+        <div class="imgBx">
+          <img src={{item.imagen}}
+            alt="" >
+          <br>
+          <br>
+          <h5>{{item.idTaxonomia.nombreCientifico}}</h5>
+          <p id="especificacion">Lechuga</p>
+        </div>
+        <div class="content">
+          <p>{{item.usoAplicacion}}</p>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+  
+  <br>
+  <br>
+    
+    <br>
+    <br>
+  </div>
+    <!--FOOTER-->
+    <br>
+  
+    <footer class="bg-dark text-center text-white">
+      <div class="container p-4">
+        <section class="mb-4">
+          <div class="container p-4">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnj_M_P-jS0JqjcfuwCJt0rvPWl58shdXjCg&usqp=CAU"
+                  class="imagen2">
+              </div>
+              <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h1 class="text-uppercase">AgroTics</h1>
+              </div>
+            </div>
+          </div>
+  
+          <hr>
+  
+          <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h2 >Universidad Técnica Particular de Loja </h2>
+            </div>
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <p>Estación Agropecuaria</p>
+              <p>Ubicación: km 3 1/2 vía a Malacatos</p>
+              <p>Área total: 32009 km</p>
+              <p>Correo Electrónico: agrotics@utpl.edu.ec</p>
+            </div>
+          </div>
+  
+        </section>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href="#">AgroTics</a>
+      </div>
+    </footer>
+    
+  
+  
+  

@@ -1,0 +1,37 @@
+h3,h2{
+  text-align: center;
+}
+
+hr{
+  color: yellow;
+  size: 10px;
+}
+.imagen2{
+  width: 100px; 
+  height: 100px;
+}
+
+.imagen1{
+  width: 50px; 
+  height: 50px;
+  
+}
+
+.card-img-top{
+  width: 400px; 
+  height: 300px;
+  margin-left: auto;
+margin-right: auto;
+}
+
+.descripcion1{
+  text-align: center;
+}
+
+
+.col-lg-4 {
+margin-bottom: 1.5rem;
+text-align: center;
+}
+
+

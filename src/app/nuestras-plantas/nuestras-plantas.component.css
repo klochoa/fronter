@@ -1,0 +1,117 @@
+h3,h2, h5, #especificacion{
+    text-align: center;
+  }
+
+  hr{
+    color: yellow;
+    size: 10px;
+  }
+  .imagen2{
+    width: 100px; 
+    height: 100px;
+  }
+
+  .imagen1{
+    width: 50px; 
+    height: 50px;
+  }
+
+  .card-img-top{
+    width: 400px; 
+    height: 300px;
+    margin-left: auto;
+  margin-right: auto;
+  }
+
+  .descripcion1{
+    text-align: center;
+  }
+
+
+.col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+#consultaplantas{
+
+  text-align: center;
+  color: white;
+  font-family: cursive;
+}
+#lupa{
+  width: 25px; 
+  height: 25px;
+}
+
+#clasificacion{
+  color: black;
+  font-family: cursive;
+  background-color: #DAD9CD;
+}
+
+.btn-toolbar{
+
+  display: flex;
+  justify-content: center;
+}
+
+#tarjetas{
+  position: relative;
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+#tarjetas .card{
+  position: relative;
+  max-width: 300px;
+  height: 215px;
+  background: white;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 202px rgba(0, 0, 0, 0, 5);
+  transition: 0.3s ease-in-out;
+}
+
+#tarjetas .card:hover{
+  height: 420px;
+}
+
+#tarjetas .card .imgBx{
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -60px;
+  left: 20px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0, 1);
+}
+
+#tarjetas .card .imgBx img{
+  max-width: 100%;
+  border-radius: 4px;
+  
+}
+
+#tarjetas .card .content{
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+
+}
+
+#tarjetas .card:hover .content{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}

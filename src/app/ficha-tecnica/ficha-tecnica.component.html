@@ -1,0 +1,272 @@
+<header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+          <img src=""
+            class="imagen1">
+        </a>
+  
+        <h2>AGROTICS</h2>
+        <hr>
+        <form class="align-self-start">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+  
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-end mb-md-0">
+          <li>
+            <a href="#" class="nav-link px-2 link-secondary">INICIO</a>
+          </li>
+          <li>
+            <a  [routerLink]= "['Estacion']" href="#" class="nav-link px-2 link-dark">ESTACIÓN</a>
+          </li>
+          <li>
+            <a [routerLink]= "['FichaTecnica']" href="#" class="nav-link px-2 link-dark">PROYECTOS</a>
+          </li>
+          <li>
+            <a [routerLink]="['MuestraPlantas']" href="#" class="nav-link px-2 link-dark">NUESTRAS PLANTAS</a>
+          </li>
+        </ul>
+  
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!--DIVISOR-->
+  <div class="jumbotron jumbotron-fluid" style="background-color: #409525;">
+    <div class="container">
+      <!--<h1 class="display-4">Fluid jumbotron</h1>-->
+      <br>
+      <h2 id="consultaplantas" class="text-center">Ficha Tecnica</h2>
+      <br>
+    </div>
+  </div>
+
+  <!--TABLA INFORMACION-->
+  <div class="container">
+      
+      <!--
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Nombre común</th>
+            <th scope="col">Nombre científico</th>
+            <th scope="col">Familia</th>
+            <th scope="col">Origen</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Plagas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let item of plantas1">
+            <td>
+              {{item.id}}
+            </td>
+            <td><img [src]="" id="imagen-json"></td>
+            <td>{{item.cicloVida}}</td>
+            <td>{{item.origen}}</td>
+            <td>{{item.usoAplicacion}}</td>
+            <td>{{item.produccionPromedio}}</td>
+            <td>{{item.altura}}</td>
+            <td>{{item.diametro}}</td>
+            <td>{{item.clima}}</td>
+
+
+          </tr>
+        </tbody>
+      </table>-->
+      
+
+  </div>
+  <!--
+  <tr *ngFor = "let item of plantas1">
+        
+    <td><img src={{item.imagen}} class="img-thumbnail"  id="imagen-json"></td>
+    
+    <p class="text-center">{{item.idCategoria.categoria}}</p>
+    <br>
+    <h3 class="text-center">{{item.idTaxonomia.nombreComun}}</h3>
+    <h4>Taxonomia</h4>-->
+
+  <!--
+    INFORMACION2
+  -->
+  <hr>
+<div class="container" *ngFor = "let item of plantas1" >
+  <div class="row">
+    <div class="col">
+      
+      <img src={{item.imagen}} class="img-thumbnail"  id="imagen-json">
+      <hr>
+      <div class="col">
+        <i class="fa fa-pied-piper" aria-hidden="true"> Temperatura optima de {{item.idTemperatura.optima}}</i>
+      </div>
+      <hr>
+      <div class="col">
+        <i class="fa fa-leaf" aria-hidden="true"> Época de siembra en {{item.idEpocaSiembra.nombreEpoca}}</i>
+      </div>
+      <hr>
+      <div class="col">
+        <i class="fa fa-tint" aria-hidden="true"> El riego {{item.idRiego.detalle}} </i>
+      </div>
+    </div>
+    <div class="col">
+      <p>{{item.idCategoria.categoria}}</p>
+      <h2>{{item.idTaxonomia.nombreComun}}</h2>
+      <br>
+      <h5>TAXONOMÍA</h5>
+      <p>Familia: {{item.idTaxonomia.familia}}</p>
+      <p>Genero: {{item.idTaxonomia.genero}}</p>
+      <p>Especie: {{item.idTaxonomia.especie}}</p>
+      <h5>MORFOLOGÍA</h5>
+      <P>Semilla: {{item.idMorfologia.semilla}}</P>
+      <p>Raíz: {{item.idMorfologia.raiz}}</p>
+      <p>Tallo: {{item.idMorfologia.tallo}} </p>
+      <p>Hojas: {{item.idMorfologia.hojas}}</p>
+      <p>Inflorencia: {{item.idMorfologia.inflorescencia}}</p>
+      <p>Frutos: {{item.idMorfologia.fruto}}</p>
+    </div>
+  </div>
+
+  <hr>
+  <h4 class="text-center">LABORES DE CULTIVO</h4>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <hr>
+        <div class="col">
+          <h4>SEMILLERO</h4>
+          <p>{{item.idSemillero.descripcion}}</p>
+          <blockquote>Cantidad de semilla: {{item.idSemillero.cantidadSemilla}} </blockquote>
+        </div>
+      </div>
+      <div class="col">
+        <hr>
+        <h4>PLANTACIÓN</h4>
+        <P>{{item.idPlantacion.detalle}}</P>
+        <blockquote>Distancia entre surcos: {{item.idPlantacion.distanciaSurcos}}</blockquote>
+        <blockquote>Distancia entre plantas: {{item.idPlantacion.distanciaPlantas}}</blockquote>
+        <blockquote>Número de plantas por surco: {{item.idPlantacion.hilerasSurco}}</blockquote>
+      </div>
+
+    </div>
+    <div class="container">
+      <h4>PREPARACIÓN DEL TERRENO</h4>
+      <hr>
+      <blockquote>
+        {{item.preparacionTerreno}}
+      </blockquote>
+      <hr>
+      <h4>RECOLECCIÓN Y ALMACENAMIENTO</h4>
+      <hr>
+
+      <blockquote>
+        {{item.idCuidado.recoleccionAlmacenamiento}}
+      </blockquote>
+    </div>
+<br>
+<br>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 ">
+    <div class="col">
+      <div class="card h-100 card border-success mb-3">
+        <div class="card-body">
+          <h5 class="card-title text-center">Buena Asociacion</h5>
+          <p class="card-text">{{item.idPlantacion.buenaAsociacion}} </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 card border-danger mb-3">
+        <div class="card-body ">
+          <h5 class="card-title text-center">Mala Asociacion</h5>
+          <p class="card-text"> {{item.idPlantacion.malaAsociacion}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 card border-info mb-3">
+        <div class="card-body ">
+          <h5 class="card-title text-center">Usos recomendados</h5>
+          <p class="card-text">{{item.usoAplicacion}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><Br>
+</div>
+</div>
+
+    <!-- FOOTER-->
+<br>
+
+<footer class="bg-dark text-center text-white">
+  <div class="container p-4">
+    <section class="mb-4">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnj_M_P-jS0JqjcfuwCJt0rvPWl58shdXjCg&usqp=CAU" class="imagen2">
+          </div>
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h1 class="text-uppercase">AgroTics</h1>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h2>Universidad Técnica Particular de Loja </h2>
+        </div>
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <p>Estación Agropecuaria</p>
+          <p>Ubicación: km 3 1/2 vía a Malacatos</p>
+          <p>Área total: 32009 km</p>
+          <p>Correo Electrónico: agrotics@utpl.edu.ec</p>
+        </div>
+      </div>
+
+    </section>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="#">AgroTics</a>
+  </div>
+</footer>
+
+
+
+
+    <!--
+    <td>{{item.cicloVida}}</td>
+    <td></td>
+    <td>{{item.usoAplicacion}}</td>
+    <td>{{item.produccionPromedio}}</td>
+    <td>{{item.altura}}</td>
+    <td>{{item.diametro}}</td>
+    <p class="text-end">{{item.clima}}</p>
+    <p class="text-end">{{item.origen}}</p>
+    <td></td>
+    
+-->
+
+  
