@@ -29,5 +29,8 @@ export class NuestrasPlantasComponent implements OnInit {
   Ficha(id: any){
     this.router.navigate(['FichaTecnica']) 
   }
+  goToLogin() {
+    window.location.href='http://127.0.0.1:8000';
+  }
 
 }
