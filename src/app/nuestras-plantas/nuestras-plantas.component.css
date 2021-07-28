@@ -7,8 +7,8 @@ h3,h2, h5, #especificacion{
     size: 10px;
   }
   .imagen2{
-    width: 100px; 
-    height: 100px;
+    width: 130px; 
+  height: 150px;
   }
 
   .imagen1{
@@ -67,7 +67,7 @@ h3,h2, h5, #especificacion{
 #tarjetas .card{
   position: relative;
   max-width: 300px;
-  height: 215px;
+  height:305px;
   background: white;
   margin: 30px 10px;
   padding: 20px 15px;
